@@ -9,7 +9,7 @@ We propose Video-TransUNet, a deep architecture for instance segmentation in med
 (a) Multi-frame ResNet-50-based feature extractor; (b) Temporal Context Module for temporal feature blending across frames; (c) Vision Transformer Block for non-local attention-based learning of multi-frame encoded input; (d) Cascaded expansive decoder with skip connections as used in original UNet architectures, however, here with multiple prediction heads co-learning the two  instances of clinical interest.<br/>
 
 ## Grad-Cam results
-<img src="https://github.com/SimonZeng7108/Video-TransUNet/blob/main/FIGS/grad_cam.png" width="500" height="355"><br/>
+<img src="https://github.com/SimonZeng7108/Video-TransUNet/blob/main/FIGS/grad_cam.png" width="600" height="426"><br/>
 Based on four sample frames (top) we show for TransUNet and our model boundary segmentations (lower rows) and GradCam output (upper rows) highlighting where models are paying attention to. Results for the bolus and pharynx are next to each other left and right, respectively, for every sample image. Note the much more target-focused results of our model.<br/>
 
 ## Repo usage
