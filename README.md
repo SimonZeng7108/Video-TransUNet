@@ -37,7 +37,7 @@ Our data ethics approval only grants usage and showing on paper, not yet support
 To fully utlise the Temporal feature of the model, sequential image data should be converted to numpy arrays and concated in `[T, H, W]` for BW data and `[T, C, H, W]` for colored data.
 
 ### 3. Train/Test
-A small batch size is recommanded as the size of the data and nature of TCM components. 
+A small batch size is recommanded as the size of the data and nature of TCM components.<br/>
 Train:<br/>
 `python train.py --dataset Synapse --vit_name R50-ViT-B_16`<br/>
 Test:<br/>
