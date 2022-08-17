@@ -5,7 +5,7 @@ This is the official repo for the paper **<Video-TransUNet: Temporally Blended V
 We propose Video-TransUNet, a deep architecture for instance segmentation in medical CT videos constructed by integrating temporal feature blending into the TransUNet deep learning framework. In particular, our approach amalgamates strong frame representation via a ResNet CNN backbone, multi-frame feature blending via a Temporal Context Module (TCM), non-local attention via a Vision Transformer, and reconstructive capabilities for multiple targets via a UNet-based convolutional-deconvolutional architecture with multiple heads. We show that this new network design can significantly outperform other state-of-the-art systems when tested on the segmentation of bolus and pharynx/larynx in Videofluoroscopic Swallowing Study (VFSS) CT sequences. On our  VFSS2022 dataset it achieves a dice coefficient of $0.8796\%$ and an average surface distance of $1.0379$ pixels. Note that tracking the pharyngeal bolus accurately is a particularly important application in clinical practice since it constitutes the primary method for diagnostics of swallowing impairment. Our findings suggest that the proposed model can indeed enhance the TransUNet architecture via exploiting temporal information and improving segmentation performance by a significant margin. We publish key source code, network weights, and ground truth annotations for simplified performance reproduction.
 
 ## Architecture Overview
-<img src="https://github.com/SimonZeng7108/Video-TransUNet/blob/main/FIGS/model.png" width="1000" height="398"><br/>
+<img src="https://github.com/SimonZeng7108/Video-TransUNet/blob/main/FIGS/model.png" width="1000" height="395"><br/>
 (a) Multi-frame ResNet-50-based feature extractor; (b) Temporal Context Module for temporal feature blending across frames; (c) Vision Transformer Block for non-local attention-based learning of multi-frame encoded input; (d) Cascaded expansive decoder with skip connections as used in original UNet architectures, however, here with multiple prediction heads co-learning the two  instances of clinical interest.<br/>
 
 ## Grad-Cam results
@@ -38,15 +38,15 @@ To fully utlise the Temporal feature of the model, sequential image data should 
 
 ### 3. Train/Test
 A small batch size is recommanded as the size of the data and nature of TCM components. 
-Train:
-`python train.py --dataset Synapse --vit_name R50-ViT-B_16`
-Test:
-`python test.py --dataset Synapse --vit_name R50-ViT-B_16`
+Train:<br/>
+`python train.py --dataset Synapse --vit_name R50-ViT-B_16`<br/>
+Test:<br/>
+`python test.py --dataset Synapse --vit_name R50-ViT-B_16`<br/>
 
 ## Ref Repo
-[Vision Transformer](https://github.com/google-research/vision_transformer)
-[TransUNet](https://github.com/Beckschen/TransUNet/blob/main/README.md)
-[TCM](https://github.com/youshyee/Greatape-Detection)
+[Vision Transformer](https://github.com/google-research/vision_transformer)<br/>
+[TransUNet](https://github.com/Beckschen/TransUNet/blob/main/README.md)<br/>
+[TCM](https://github.com/youshyee/Greatape-Detection)<br/>
 
 ## Citation
 
