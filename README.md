@@ -9,7 +9,7 @@ We propose Video-TransUNet, a deep architecture for instance segmentation in med
 (a) Multi-frame ResNet-50-based feature extractor; (b) Temporal Context Module for temporal feature blending across frames; (c) Vision Transformer Block for non-local attention-based learning of multi-frame encoded input; (d) Cascaded expansive decoder with skip connections as used in original UNet architectures, however, here with multiple prediction heads co-learning the two  instances of clinical interest.<br/>
 
 ## Grad-Cam results
-<img src="https://github.com/SimonZeng7108/Video-TransUNet/blob/main/FIGS/grad_cam.png" width="800" height="568"><br/>
+<img src="https://github.com/SimonZeng7108/Video-TransUNet/blob/main/FIGS/grad_cam.png" width="500" height="355"><br/>
 Based on four sample frames (top) we show for TransUNet and our model boundary segmentations (lower rows) and GradCam output (upper rows) highlighting where models are paying attention to. Results for the bolus and pharynx are next to each other left and right, respectively, for every sample image. Note the much more target-focused results of our model.<br/>
 
 ## Repo usage
@@ -25,15 +25,29 @@ Based on four sample frames (top) we show for TransUNet and our model boundary s
 - `mmcv == 1.5.0`
 - `Medpy`
 
-### 1.Download ViT pre-trained models
+### 1. Download ViT pre-trained models
 [Get models in this link](https://console.cloud.google.com/storage/browser/vit_models/imagenet21k?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&prefix=&forceOnObjectsSortingFiltering=false)
 * R50-ViT-B_16
 * ViT-B_16
 * ViT-L_16
 ...
 
+### 2. Data 
+Our data ethics approval only grants usage and showing on paper, not yet support full release. 
+To fully utlise the Temporal feature of the model, sequential image data should be converted to numpy arrays and concated in `[T, H, W]` for BW data and `[T, C, H, W]` for colored data.
 
+### 3. Train/Test
+A small batch size is recommanded as the size of the data and nature of TCM components. 
+Train:
+`python train.py --dataset Synapse --vit_name R50-ViT-B_16`
+Test:
+`python test.py --dataset Synapse --vit_name R50-ViT-B_16`
 
+## Ref Repo
+[Vision Transformer](https://github.com/google-research/vision_transformer)
+[TransUNet](https://github.com/Beckschen/TransUNet/blob/main/README.md)
+[TCM](https://github.com/youshyee/Greatape-Detection)
 
+## Citation
 
 
