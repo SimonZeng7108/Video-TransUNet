@@ -3,7 +3,7 @@ This is the official repo for the paper **[<Video-TransUNet: Temporally Blended 
 Chengxi Zeng, Xinyu Yang, Majid Mirmehdi, Alberto M Gambaruto and Tilo Burghardt
 
 Please also see our latest update using Swintransformer. .<br/>
-**[<Video-TransUNet: Temporally Blended Vision Transformer for CT VFSS Instance Segmentation>](https://arxiv.org/abs/2302.11325)**.<br/>
+**[<Video-SwinUNet: Spatio-temporal Deep Learning Framework for VFSS Instance Segmentation>](https://arxiv.org/abs/2302.11325)**.<br/>
 IEEE International Conference on Image Processing<br/>
 [Github](https://github.com/SimonZeng7108/Video-SwinUNet)<br/>
 
