@@ -1,6 +1,6 @@
 # Video-TransUNet
 This is the official repo for the paper **[<Video-TransUNet: Temporally Blended Vision Transformer for CT VFSS Instance Segmentation>](https://arxiv.org/abs/2208.08315)**.<br/>
-Chengxi Zeng, Xinyu Yang, Majid Mirmehdi, Alberto M Gambaruto and Tilo Burghardt
+Chengxi Zeng, Xinyu Yang, Majid Mirmehdi, Alberto M Gambaruto and Tilo Burghardt<br/>
 SPIE Internation Conference on Machine Vision
 
 Please also see our latest update using Swintransformer .<br/>
